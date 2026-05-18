@@ -18,9 +18,9 @@ st.markdown("Predict **river discharge (m³/s)** and **flood warning level** usi
 @st.cache_resource
 def load_all_models():
     lstm_models = {
-       "Sialkot": load_model("lstm_discharge_Sialkot.h5",compile=False,safe_mode=False),
-        "Okara": load_model("lstm_discharge_Okara.h5",compile=False,safe_mode=False),
-        "Multan": load_model("lstm_discharge_Multan.h5",compile=False,safe_mode=False),
+       "Sialkot": load_model("lstm_discharge_Sialkot.keras",compile=False),
+        "Okara": load_model("lstm_discharge_Okara.keras",compile=False),
+        "Multan": load_model("lstm_discharge_Multan.keras",compile=False),
     }
     
 
