@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
 # =========================
 # App Configuration
@@ -18,9 +18,9 @@ st.markdown("Predict **river discharge (m³/s)** and **flood warning level** usi
 @st.cache_resource
 def load_all_models():
     lstm_models = {
-       "Sialkot": load_model("lstm_discharge_Sialkot.h5",compile=False),
-        "Okara": load_model("lstm_discharge_Okara.h5",compile=False),
-        "Multan": load_model("lstm_discharge_Multan.h5",compile=False),
+       "Sialkot": load_model("lstm_discharge_Sialkot.h5",compile=False,safe_mode=False),
+        "Okara": load_model("lstm_discharge_Okara.h5",compile=False,safe_mode=False),
+        "Multan": load_model("lstm_discharge_Multan.h5",compile=False,safe_mode=False),
     }
     
 
